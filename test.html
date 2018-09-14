@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        blockquote.twitter-tweet {
+            display: inline-block;
+            font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 16px;
+            border-color: #eee #ddd #bbb;
+            border-radius: 5px;
+            border-style: solid;
+            border-width: 1px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+            margin: 10px 5px;
+            padding: 0 16px 16px 16px;
+            max-width: 468px;
+        }
+
+        blockquote.twitter-tweet p {
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 20px;
+        }
+
+        blockquote.twitter-tweet a {
+            color: inherit;
+            font-weight: normal;
+            text-decoration: none;
+            outline: 0 none;
+        }
+
+        blockquote.twitter-tweet a:hover,
+        blockquote.twitter-tweet a:focus {
+            text-decoration: underline;
+        }
+
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        #map {
+            width: 50%;
+            height: 50%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #tweets {
+            display: inline-block;
+            vertical-align: top;
+            height: 50%;
+            overflow-y:auto;
+        }
+
+        /*html, body {*/
+            /*height: 100%;*/
+            /*margin: 0;*/
+            /*padding: 0;*/
+        /*}*/
+    </style>
+
+    <title>Title</title>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="tweets">
+        <blockquote class="twitter-tweet" data-lang="en">
+            <a href="https://twitter.com/jack/status/20"></a>
+        </blockquote>
+        <blockquote class="twitter-tweet" data-lang="en">
+            <a href="https://twitter.com/jack/status/20"></a>
+        </blockquote>
+        <blockquote class="twitter-tweet" data-lang="en">
+            <a href="https://twitter.com/jack/status/20"></a>
+        </blockquote>
+        <blockquote class="twitter-tweet" data-lang="en">
+            <a href="https://twitter.com/jack/status/20"></a>
+        </blockquote>
+        <blockquote class="twitter-tweet" data-lang="en">
+            <a href="https://twitter.com/jack/status/20"></a>
+        </blockquote>
+    </div>
+
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
+        }
+    </script>
+    <script async
+            src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!--AIzaSyBVOwJRyt3T0E5MQPNsH3Q4GZ2G-NJ7zAI-->
+    <script async defer
+            src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBVOwJRyt3T0E5MQPNsH3Q4GZ2G-NJ7zAI&callback=initMap"></script>
+</body>
+</html>
